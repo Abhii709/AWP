@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+</head>
+<body>
+	<form id="login-form">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br><br>
+
+		<input type="submit" value="Login">
+	</form>
+
+	<script>
+		// Get form element
+		const form = document.getElementById("login-form");
+
+		// Add submit event listener to form
+		form.addEventListener("submit", function(event) {
+			event.preventDefault(); // Prevent form from submitting
+
+			// Get username and password input values
+			const username = document.getElementById("username").value;
+			const password = document.getElementById("password").value;
+
+			// Validate input
+			if (username === "myusername" && password === "mypassword") {
+				alert("Login successful!");
+			} else {
+				alert("Invalid username or password!");
+			}
+		});
+	</script>
+</body>
+</html>
